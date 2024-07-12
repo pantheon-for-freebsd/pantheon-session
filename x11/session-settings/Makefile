@@ -1,4 +1,4 @@
-PORTNAME=	session-settings
+PORTNAME=	pantheon-session
 DISTVERSION=	6.0.0
 CATEGORIES=	sysutils
 
@@ -8,14 +8,17 @@ WWW=		https://github.com/elementary/session-settings/
 
 LICENSE=	GPLv3
 
-# BUILD_DEPENDS=	gln:sysutils/coreutils \
-# 	gnome-keyring-daemon:security/gnome-keyring \
+BUILD_DEPENDS=	\
+	gnome-keyring-daemon:security/gnome-keyring \
+	orca:accessibility/orca
+# gln:sysutils/coreutils \
 
-USES=gettext-tools vala meson ninja pkgconfig
+USES=vala meson ninja pkgconfig #gettext-tools
 MESON_ARGS=		--prefix=${PREFIX}
 MESON_BUILD_DIR=	build
 USE_GITHUB=		yes
 GH_ACCOUNT=		elementary
+GH_PROJECT=		session-settings
 
 do-build:
 	cd ${WRKSRC} && meson setup build
