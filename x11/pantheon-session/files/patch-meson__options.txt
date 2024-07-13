@@ -1,0 +1,9 @@
+--- meson_options.txt.orig	2024-06-12 18:08:22 UTC
++++ meson_options.txt
+@@ -4,5 +4,5 @@ option('fallback-session', type : 'string', value: 'ub
+ option('fallback-session', type : 'string', value: 'ubuntu',
+        description : 'Fallback session to use for Pantheon')
+ 
+-option('detect-program-prefixes', type: 'boolean', value: false,
++option('detect-program-prefixes', type: 'boolean', value: true,
+        description : 'This is needed for platforms that install packages into individual prefixes (like Guix System or NixOS')
