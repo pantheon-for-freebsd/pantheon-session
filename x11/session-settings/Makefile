@@ -11,9 +11,8 @@ LICENSE=	GPLv3
 BUILD_DEPENDS=	\
 	gnome-keyring-daemon:security/gnome-keyring \
 	orca:accessibility/orca
-# gln:sysutils/coreutils \
 
-USES=vala meson ninja pkgconfig #gettext-tools
+USES=vala meson ninja pkgconfig
 MESON_ARGS=		--prefix=${PREFIX}
 MESON_BUILD_DIR=	build
 USE_GITHUB=		yes
